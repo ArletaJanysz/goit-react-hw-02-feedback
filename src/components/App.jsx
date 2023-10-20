@@ -4,7 +4,7 @@ import FeedbackOptions from './FeedbackOptions';
 import Statistics from './Statistics';
 import Notification from './Notification';
 
-function App() {
+export function App() {
   const [feedback, setFeedback] = useState({
     good: 0,
     neutral: 0,
@@ -49,4 +49,4 @@ function App() {
   );
 }
 
-export default App;
+
