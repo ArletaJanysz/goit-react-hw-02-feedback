@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
-import Section from './Section';
-import FeedbackOptions from './FeedbackOptions';
-import Statistics from './Statistics';
-import Notification from './Notification';
+import Section from '../Section/Section';
+import FeedbackOptions from '../FeedbackOptions/FeedbackOptions';
+import Statistics from '../Statistics/Statistics';
+import Notification from '../Notification/Notification';
+
+
+import '../App/App.css';
 
 export function App() {
   const [feedback, setFeedback] = useState({
@@ -22,7 +25,7 @@ export function App() {
   const positivePercentage = totalFeedback > 0 ? (feedback.good / totalFeedback) * 100 : 0;
 
   return (
-    <div>
+    <div className="container">
       <Section title="Leave your feedback">
         <FeedbackOptions
           options={['good', 'neutral', 'bad']}
